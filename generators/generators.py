@@ -41,7 +41,7 @@ def size():
     return random.randrange(1, 3)
 
 def price():
-    return random.randrange(5, 10)
+    return random.randrange(20, 40) / 4
 
 TYPES_TO_GENERATORS = {
     'id': random_string,

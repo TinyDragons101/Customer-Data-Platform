@@ -1,61 +1,61 @@
 Index ,prod_id         ,name                      ,size ,price
-    1 ,6aadcCcb19De1De ,Pizza Napoletana          ,   1 ,    6
-    2 ,f83E690CA8Fc6E2 ,Pizza Napoletana          ,   2 ,   14
-    3 ,1Cbbb74a0D8b68c ,Pizza Napoletana          ,   3 ,   27
-    4 ,8b1B7b4fC2Aa54D ,Pizza Margherita          ,   1 ,    8
-    5 ,18A0Ae4Af930DFD ,Pizza Margherita          ,   2 ,   12
-    6 ,C37BD84fa9eE2cc ,Pizza Margherita          ,   3 ,   18
-    7 ,4af4aCdAea5bae3 ,Pizza alla diavola        ,   1 ,    7
-    8 ,5E5DefCa8fAb7ad ,Pizza alla diavola        ,   2 ,   18
-    9 ,9fF429aeAeda9F4 ,Pizza alla diavola        ,   3 ,   24
-   10 ,d14a8faeCBfbCCA ,Pizza bufalina            ,   1 ,    8
-   11 ,D8c7aBF826E2cEB ,Pizza bufalina            ,   2 ,   14
-   12 ,cCcC901096F1624 ,Pizza bufalina            ,   3 ,   27
-   13 ,3ce5CbA5848B401 ,Pizza quattro formaggi    ,   1 ,    7
-   14 ,a8c0cBcD624eF86 ,Pizza quattro formaggi    ,   2 ,   10
-   15 ,eBBFbd29B5Fb24e ,Pizza quattro formaggi    ,   3 ,   27
-   16 ,DF7FFe7BcEeD0Ce ,Pizza capricious          ,   1 ,    5
-   17 ,2365755cDEbf78b ,Pizza capricious          ,   2 ,   18
-   18 ,7e1Ec6FEaE5543D ,Pizza capricious          ,   3 ,   21
-   19 ,443E504030Be1e8 ,Pizzetta                  ,   1 ,    5
-   20 ,1Dbef943aDF2ffF ,Pizzetta                  ,   2 ,   12
-   21 ,cB0cBf425bCa814 ,Pizzetta                  ,   3 ,   18
-   22 ,e0848A205dECc67 ,Pizza al taglio           ,   1 ,    7
-   23 ,3b2cA80Cd17dc81 ,Pizza al taglio           ,   2 ,   12
-   24 ,fDFDdf0Eb3af9Cd ,Pizza al taglio           ,   3 ,   21
-   25 ,0cFE3fCc3aBFB6d ,Calzones Pizza            ,   1 ,    6
-   26 ,B16a5B9edC4e8fB ,Calzones Pizza            ,   2 ,   16
-   27 ,a2bfe0cfdCe9ad1 ,Calzones Pizza            ,   3 ,   15
-   28 ,Cad6F6841504B7B ,Pizza ai funghi           ,   1 ,    8
-   29 ,fE127bd9Bad7Bf3 ,Pizza ai funghi           ,   2 ,   18
-   30 ,AaCe705cdDB2cD1 ,Pizza ai funghi           ,   3 ,   27
-   31 ,C0A0C3bC834Ec9D ,Pizza Romana              ,   1 ,    6
-   32 ,cA4Def272e90FE9 ,Pizza Romana              ,   2 ,   18
-   33 ,dd5c3a3cCfEBCBb ,Pizza Romana              ,   3 ,   15
-   34 ,0aaED14eA0623d8 ,Pinsa romana              ,   1 ,    7
-   35 ,36BAa3e7B9b781B ,Pinsa romana              ,   2 ,   10
-   36 ,2a2B3000f54C731 ,Pinsa romana              ,   3 ,   24
-   37 ,B9B27a3AF05a73F ,Prosciutto e funghi pizza ,   1 ,    8
-   38 ,d0ACd5EB2B75236 ,Prosciutto e funghi pizza ,   2 ,   14
-   39 ,Aaf814EdACC420d ,Prosciutto e funghi pizza ,   3 ,   18
-   40 ,7BC2Ff2E8CaD0A2 ,Kebab pizza               ,   1 ,    7
-   41 ,B7b6dcDe5f2Ce63 ,Kebab pizza               ,   2 ,   12
-   42 ,7D06f4E4adfDA59 ,Kebab pizza               ,   3 ,   18
-   43 ,AaFA4e72291B2ca ,Flammkuchen               ,   1 ,    5
-   44 ,8E6897Fc440E47f ,Flammkuchen               ,   2 ,   16
-   45 ,Ac5bbFfe00BcFa0 ,Flammkuchen               ,   3 ,   18
-   46 ,94Fd8AcF9bAd900 ,Dayton-style pizza        ,   1 ,    6
-   47 ,4fb61DBC7EbbCAb ,Dayton-style pizza        ,   2 ,   14
-   48 ,1eef2DB25D0b7ec ,Dayton-style pizza        ,   3 ,   15
-   49 ,5c0b7DcEEbA762c ,Pissaladiere              ,   1 ,    7
-   50 ,8eD7F38ffdB2401 ,Pissaladiere              ,   2 ,   16
-   51 ,9BceE6c828Dc39e ,Pissaladiere              ,   3 ,   27
-   52 ,B2180Cdef1Ac55f ,Lahmacun                  ,   1 ,    9
-   53 ,557D67bAB46DBDA ,Lahmacun                  ,   2 ,   16
-   54 ,FC4AC08bD68A7ff ,Lahmacun                  ,   3 ,   21
-   55 ,F5Da501cEa2E35f ,Sicilian                  ,   1 ,    8
-   56 ,30f3ee0cE09B7A3 ,Sicilian                  ,   2 ,   16
-   57 ,6CFE9104c08b07C ,Sicilian                  ,   3 ,   27
-   58 ,e75bc33BBCCEfd6 ,Fugazza                   ,   1 ,    7
-   59 ,8c4aeA1BeaC89d6 ,Fugazza                   ,   2 ,   14
-   60 ,3630aF887ec27Bf ,Fugazza                   ,   3 ,   21
+    1 ,94E559c49d887e6 ,Pizza Napoletana          ,   1 , 5.5
+    2 ,dE5FF47215c5ecc ,Pizza Napoletana          ,   2 ,18.0
+    3 ,6Be294b861C10E3 ,Pizza Napoletana          ,   3 ,23.25
+    4 ,cA3aB2Fcc01bEd6 ,Pizza Margherita          ,   1 , 8.0
+    5 ,FdeFCB3CFC54a69 ,Pizza Margherita          ,   2 ,19.0
+    6 ,aa58Df7FBaFD9e0 ,Pizza Margherita          ,   3 ,18.0
+    7 ,8ef10BcA35c4cfB ,Pizza alla diavola        ,   1 , 9.25
+    8 ,1DBa8a4CBAF06C9 ,Pizza alla diavola        ,   2 ,13.0
+    9 ,57fDe21a4748Da3 ,Pizza alla diavola        ,   3 ,21.75
+   10 ,Fb010Cee5113795 ,Pizza bufalina            ,   1 , 7.0
+   11 ,AadDFAdBfbbbf35 ,Pizza bufalina            ,   2 ,10.5
+   12 ,e9F5a013b6E13fc ,Pizza bufalina            ,   3 ,18.75
+   13 ,ca7789FB7E5A7da ,Pizza quattro formaggi    ,   1 , 7.75
+   14 ,aEe7758289F9FBD ,Pizza quattro formaggi    ,   2 ,15.0
+   15 ,B2Eb3Ae9A1fE66F ,Pizza quattro formaggi    ,   3 ,29.25
+   16 ,5fFcaDBd03B013D ,Pizza capricious          ,   1 , 9.5
+   17 ,1f49feC795b3f0E ,Pizza capricious          ,   2 ,12.0
+   18 ,ce56aDe5716CAa3 ,Pizza capricious          ,   3 ,28.5
+   19 ,b7EC4999deFa9fF ,Pizzetta                  ,   1 , 6.25
+   20 ,FFCa5eaAAD75F45 ,Pizzetta                  ,   2 ,17.5
+   21 ,7AEfA8aB057A3aD ,Pizzetta                  ,   3 ,24.0
+   22 ,c6d6aad0fFe8aBc ,Pizza al taglio           ,   1 , 8.0
+   23 ,2144c9a5b850B67 ,Pizza al taglio           ,   2 ,18.0
+   24 ,38bb3927A616fe3 ,Pizza al taglio           ,   3 ,18.0
+   25 ,c7ac54b72aEF3aD ,Calzones Pizza            ,   1 , 9.0
+   26 ,74f9b68Bb41abbB ,Calzones Pizza            ,   2 ,11.5
+   27 ,652d2eBdae73522 ,Calzones Pizza            ,   3 ,29.25
+   28 ,18b0Cf4AaA63eD1 ,Pizza ai funghi           ,   1 , 8.5
+   29 ,3CC854aCaA3d95B ,Pizza ai funghi           ,   2 ,17.5
+   30 ,e9A9Ef0f29F5b5d ,Pizza ai funghi           ,   3 ,15.0
+   31 ,84BCC9f2BC4e9D2 ,Pizza Romana              ,   1 , 9.0
+   32 ,6e5e9d03cb5aB2f ,Pizza Romana              ,   2 ,12.0
+   33 ,cbAF6bf0aEBB73C ,Pizza Romana              ,   3 ,18.75
+   34 ,6d13770e0Af7aE5 ,Pinsa romana              ,   1 , 9.25
+   35 ,cE2CBBF53F3dc67 ,Pinsa romana              ,   2 ,16.5
+   36 ,2CEE6c48b2EAeFf ,Pinsa romana              ,   3 ,16.5
+   37 ,bDa7E49Cafa0ebb ,Prosciutto e funghi pizza ,   1 , 6.75
+   38 ,f54cFD4a7bA36BF ,Prosciutto e funghi pizza ,   2 ,12.5
+   39 ,2Cd0f6f32a3FA5a ,Prosciutto e funghi pizza ,   3 ,21.75
+   40 ,92Bf840eA0eFCf2 ,Kebab pizza               ,   1 , 7.0
+   41 ,DBdeAADfa72F790 ,Kebab pizza               ,   2 ,17.5
+   42 ,c185999f1eCf407 ,Kebab pizza               ,   3 ,29.25
+   43 ,2aeb6E305eff99b ,Flammkuchen               ,   1 , 6.25
+   44 ,f87FEbF4AeafA25 ,Flammkuchen               ,   2 ,10.5
+   45 ,A9cdFbB4B2bd9A8 ,Flammkuchen               ,   3 ,26.25
+   46 ,6Dbafcafe4CC9cf ,Dayton-style pizza        ,   1 , 5.25
+   47 ,A2c30cBA0804906 ,Dayton-style pizza        ,   2 ,18.0
+   48 ,214F57F6FFaeC0e ,Dayton-style pizza        ,   3 ,15.75
+   49 ,9d8BeffDbDAD55F ,Pissaladiere              ,   1 , 9.75
+   50 ,C1Dd8b1fefCDFB4 ,Pissaladiere              ,   2 ,15.0
+   51 ,DeB444C354a7c95 ,Pissaladiere              ,   3 ,16.5
+   52 ,17be65df6bC9faC ,Lahmacun                  ,   1 , 9.5
+   53 ,d0a03f1F3eBEc42 ,Lahmacun                  ,   2 ,14.0
+   54 ,A64eed1EcD2B65F ,Lahmacun                  ,   3 ,16.5
+   55 ,601E1D8Fedc3C5D ,Sicilian                  ,   1 , 7.25
+   56 ,EA3F9C66Dcf6BE6 ,Sicilian                  ,   2 ,11.0
+   57 ,815b3E9fea43d16 ,Sicilian                  ,   3 ,18.75
+   58 ,77D0eE3CFcCd0D6 ,Fugazza                   ,   1 , 5.75
+   59 ,Cb6a63AC49Fd4af ,Fugazza                   ,   2 ,17.5
+   60 ,FfE4092EFF49b3c ,Fugazza                   ,   3 ,25.5

@@ -88,8 +88,6 @@ def generate_product():
     #     print("{} already exists".format(file_path))
                     
                 
-    
-
 if __name__ == '__main__':
     generate_file('customers', 'customers-200', 200)
     generate_product()
