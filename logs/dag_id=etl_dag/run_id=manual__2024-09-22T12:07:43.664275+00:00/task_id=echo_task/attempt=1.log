@@ -1,0 +1,24 @@
+[2024-09-22T12:07:50.084+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:07:50.100+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:07:43.664275+00:00 [queued]>
+[2024-09-22T12:07:50.107+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:07:43.664275+00:00 [queued]>
+[2024-09-22T12:07:50.108+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T12:07:50.118+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): echo_task> on 2024-09-22 12:07:43.664275+00:00
+[2024-09-22T12:07:50.122+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1947) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:07:50.123+0000] {standard_task_runner.py:72} INFO - Started process 1948 to run task
+[2024-09-22T12:07:50.123+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'echo_task', 'manual__2024-09-22T12:07:43.664275+00:00', '--job-id', '697', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp5k6zv6lu']
+[2024-09-22T12:07:50.125+0000] {standard_task_runner.py:105} INFO - Job 697: Subtask echo_task
+[2024-09-22T12:07:50.170+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.echo_task manual__2024-09-22T12:07:43.664275+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T12:07:50.251+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='echo_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T12:07:43.664275+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T12:07:43.664275+00:00'
+[2024-09-22T12:07:50.252+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:07:50.255+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T12:07:50.256+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "echo [{'cust_id': '04BcDADb3Ac0Dd9', 'name': 'Mrs. Roberta Bell', 'sex': 'Female', 'age': 52, 'address': '61544 Eric Skyway', 'phone': '001-907-581-8416x754', 'job': 'Designer, multimedia'}, {'cust_id': 'f49cb6cE810b959', 'name': 'Dean Mathews', 'sex': 'Female', 'age': 64, 'address': '2632 Nancy Row Apt. 663', 'phone': '814.666.3102x372', 'job': 'Engineer, water'}, {'cust_id': '4CBDC39e22B95b5', 'name': 'Ms. Victoria Moyer', 'sex': 'Male', 'age': 14, 'address': '01897 Jeanne Port Suite 678', 'phone': '001-667-699-8979x864', 'job': 'Adult nurse'}, {'cust_id': 'a4F7210Da678edA', 'name': 'Dr. Shannon Walton', 'sex': 'Female', 'age': 10, 'address': '89704 Bruce Isle Apt. 521', 'phone': '735.657.0744x66574', 'job': 'Commercial/residential surveyor'}, {'cust_id': '5CABC9dF614DAFa', 'name': 'Mrs. Bethany Hutchinson', 'sex': 'Male', 'age': 15, 'address': '2724 Fisher Camp Apt. 622', 'phone': '875-957-2066', 'job': 'Film/video editor'}]"]
+[2024-09-22T12:07:50.262+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T12:07:50.264+0000] {subprocess.py:93} INFO - [{cust_id: 04BcDADb3Ac0Dd9, name: Mrs. Roberta Bell, sex: Female, age: 52, address: 61544 Eric Skyway, phone: 001-907-581-8416x754, job: Designer, multimedia}, {cust_id: f49cb6cE810b959, name: Dean Mathews, sex: Female, age: 64, address: 2632 Nancy Row Apt. 663, phone: 814.666.3102x372, job: Engineer, water}, {cust_id: 4CBDC39e22B95b5, name: Ms. Victoria Moyer, sex: Male, age: 14, address: 01897 Jeanne Port Suite 678, phone: 001-667-699-8979x864, job: Adult nurse}, {cust_id: a4F7210Da678edA, name: Dr. Shannon Walton, sex: Female, age: 10, address: 89704 Bruce Isle Apt. 521, phone: 735.657.0744x66574, job: Commercial/residential surveyor}, {cust_id: 5CABC9dF614DAFa, name: Mrs. Bethany Hutchinson, sex: Male, age: 15, address: 2724 Fisher Camp Apt. 622, phone: 875-957-2066, job: Film/video editor}]
+[2024-09-22T12:07:50.266+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T12:07:50.286+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:07:50.287+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=echo_task, run_id=manual__2024-09-22T12:07:43.664275+00:00, execution_date=20240922T120743, start_date=20240922T120750, end_date=20240922T120750
+[2024-09-22T12:07:50.307+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:07:50.325+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T12:07:50.326+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

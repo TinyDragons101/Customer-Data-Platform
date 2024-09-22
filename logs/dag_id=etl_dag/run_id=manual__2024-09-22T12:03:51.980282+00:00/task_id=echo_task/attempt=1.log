@@ -1,0 +1,24 @@
+[2024-09-22T12:03:58.377+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:03:58.395+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:03:51.980282+00:00 [queued]>
+[2024-09-22T12:03:58.421+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:03:51.980282+00:00 [queued]>
+[2024-09-22T12:03:58.423+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T12:03:58.443+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): echo_task> on 2024-09-22 12:03:51.980282+00:00
+[2024-09-22T12:03:58.458+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1824) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:03:58.460+0000] {standard_task_runner.py:72} INFO - Started process 1825 to run task
+[2024-09-22T12:03:58.460+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'echo_task', 'manual__2024-09-22T12:03:51.980282+00:00', '--job-id', '673', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpboryg09z']
+[2024-09-22T12:03:58.462+0000] {standard_task_runner.py:105} INFO - Job 673: Subtask echo_task
+[2024-09-22T12:03:58.507+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.echo_task manual__2024-09-22T12:03:51.980282+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T12:03:58.588+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='echo_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T12:03:51.980282+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T12:03:51.980282+00:00'
+[2024-09-22T12:03:58.590+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:03:58.593+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T12:03:58.594+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "echo [{'cust_id': 'EcEb185D95C419a', 'name': 'Dr. Wesley Tapia II', 'sex': 'Male', 'age': 64, 'address': '04998 Patrick Ranch Suite 288', 'phone': '+1-732-518-6910x92555', 'job': 'Occupational hygienist'}, {'cust_id': '8732ba96daB36E2', 'name': 'Curtis David', 'sex': 'Female', 'age': 56, 'address': '7616 Cory Shoal Apt. 649', 'phone': '828-261-4835x69069', 'job': 'Optician, dispensing'}, {'cust_id': '53D5cdb6C2377cD', 'name': 'Lisa Dalton DVM', 'sex': 'Male', 'age': 23, 'address': '9195 Bentley Flat Suite 956', 'phone': '001-285-964-8674x365', 'job': 'Banker'}, {'cust_id': '6BA71a2B560091a', 'name': 'Mrs. Joy Jenkins PhD', 'sex': 'Male', 'age': 68, 'address': '86597 Natalie Fields', 'phone': '001-963-679-8592x5706', 'job': 'Psychologist, occupational'}, {'cust_id': '76062C5619FC910', 'name': 'Mr. Daniel Torres Jr.', 'sex': 'Male', 'age': 13, 'address': '42601 Goodwin Extension Apt. 843', 'phone': '3736992791', 'job': 'Adult guidance worker'}]"]
+[2024-09-22T12:03:58.600+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T12:03:58.603+0000] {subprocess.py:93} INFO - [{cust_id: EcEb185D95C419a, name: Dr. Wesley Tapia II, sex: Male, age: 64, address: 04998 Patrick Ranch Suite 288, phone: +1-732-518-6910x92555, job: Occupational hygienist}, {cust_id: 8732ba96daB36E2, name: Curtis David, sex: Female, age: 56, address: 7616 Cory Shoal Apt. 649, phone: 828-261-4835x69069, job: Optician, dispensing}, {cust_id: 53D5cdb6C2377cD, name: Lisa Dalton DVM, sex: Male, age: 23, address: 9195 Bentley Flat Suite 956, phone: 001-285-964-8674x365, job: Banker}, {cust_id: 6BA71a2B560091a, name: Mrs. Joy Jenkins PhD, sex: Male, age: 68, address: 86597 Natalie Fields, phone: 001-963-679-8592x5706, job: Psychologist, occupational}, {cust_id: 76062C5619FC910, name: Mr. Daniel Torres Jr., sex: Male, age: 13, address: 42601 Goodwin Extension Apt. 843, phone: 3736992791, job: Adult guidance worker}]
+[2024-09-22T12:03:58.605+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T12:03:58.628+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:03:58.630+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=echo_task, run_id=manual__2024-09-22T12:03:51.980282+00:00, execution_date=20240922T120351, start_date=20240922T120358, end_date=20240922T120358
+[2024-09-22T12:03:58.684+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:03:58.714+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T12:03:58.718+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,24 @@
+[2024-09-22T12:03:49.276+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:03:49.293+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:02:43.176971+00:00 [queued]>
+[2024-09-22T12:03:49.300+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:02:43.176971+00:00 [queued]>
+[2024-09-22T12:03:49.301+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T12:03:49.312+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): echo_task> on 2024-09-22 12:02:43.176971+00:00
+[2024-09-22T12:03:49.319+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1802) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:03:49.320+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'echo_task', 'manual__2024-09-22T12:02:43.176971+00:00', '--job-id', '666', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpvxdyf7ms']
+[2024-09-22T12:03:49.321+0000] {standard_task_runner.py:72} INFO - Started process 1803 to run task
+[2024-09-22T12:03:49.322+0000] {standard_task_runner.py:105} INFO - Job 666: Subtask echo_task
+[2024-09-22T12:03:49.375+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.echo_task manual__2024-09-22T12:02:43.176971+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T12:03:49.445+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='echo_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T12:02:43.176971+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T12:02:43.176971+00:00'
+[2024-09-22T12:03:49.447+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:03:49.449+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T12:03:49.450+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "echo [{'cust_id': '93EDeD28f05Ce03', 'name': 'Blake Watkins II', 'sex': 'Female', 'age': 17, 'address': '7187 Horne Mountain Apt. 624', 'phone': '(819)309-5495x43377', 'job': 'Primary school teacher'}, {'cust_id': 'B49a89f7cdAae37', 'name': 'Dr. Dalton Blake', 'sex': 'Female', 'age': 16, 'address': '233 Mercedes Grove', 'phone': '+1-732-790-2384', 'job': 'Advertising art director'}, {'cust_id': 'DE513a368a93915', 'name': 'Emily Patton MD', 'sex': 'Female', 'age': 13, 'address': '2283 Melody Drives Apt. 537', 'phone': '(967)964-7336x482', 'job': 'Scientist, research (maths)'}, {'cust_id': 'ea9a36D777fDC71', 'name': 'Mr. Joel Mcneil DDS', 'sex': 'Female', 'age': 36, 'address': '30899 Kelsey Shore Suite 320', 'phone': '+1-711-879-6724x142', 'job': 'Research scientist (medical)'}, {'cust_id': '98eD68E9E1b5a8A', 'name': 'Julian Mann II', 'sex': 'Female', 'age': 11, 'address': '97058 Miranda Station Suite 052', 'phone': '001-527-674-6302x6031', 'job': 'Field trials officer'}]"]
+[2024-09-22T12:03:49.455+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T12:03:49.458+0000] {subprocess.py:93} INFO - [{cust_id: 93EDeD28f05Ce03, name: Blake Watkins II, sex: Female, age: 17, address: 7187 Horne Mountain Apt. 624, phone: (819)309-5495x43377, job: Primary school teacher}, {cust_id: B49a89f7cdAae37, name: Dr. Dalton Blake, sex: Female, age: 16, address: 233 Mercedes Grove, phone: +1-732-790-2384, job: Advertising art director}, {cust_id: DE513a368a93915, name: Emily Patton MD, sex: Female, age: 13, address: 2283 Melody Drives Apt. 537, phone: (967)964-7336x482, job: Scientist, research (maths)}, {cust_id: ea9a36D777fDC71, name: Mr. Joel Mcneil DDS, sex: Female, age: 36, address: 30899 Kelsey Shore Suite 320, phone: +1-711-879-6724x142, job: Research scientist (medical)}, {cust_id: 98eD68E9E1b5a8A, name: Julian Mann II, sex: Female, age: 11, address: 97058 Miranda Station Suite 052, phone: 001-527-674-6302x6031, job: Field trials officer}]
+[2024-09-22T12:03:49.460+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T12:03:49.484+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:03:49.485+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=echo_task, run_id=manual__2024-09-22T12:02:43.176971+00:00, execution_date=20240922T120243, start_date=20240922T120349, end_date=20240922T120349
+[2024-09-22T12:03:49.501+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:03:49.527+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T12:03:49.530+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

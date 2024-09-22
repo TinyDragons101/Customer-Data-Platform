@@ -1,0 +1,23 @@
+[2024-09-22T12:55:40.644+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:55:40.657+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.load manual__2024-09-22T12:55:33.909959+00:00 [queued]>
+[2024-09-22T12:55:40.663+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.load manual__2024-09-22T12:55:33.909959+00:00 [queued]>
+[2024-09-22T12:55:40.664+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T12:55:40.671+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2024-09-22 12:55:33.909959+00:00
+[2024-09-22T12:55:40.675+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3066) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:55:40.676+0000] {standard_task_runner.py:72} INFO - Started process 3067 to run task
+[2024-09-22T12:55:40.676+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'load', 'manual__2024-09-22T12:55:33.909959+00:00', '--job-id', '860', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp62rf7qpv']
+[2024-09-22T12:55:40.677+0000] {standard_task_runner.py:105} INFO - Job 860: Subtask load
+[2024-09-22T12:55:40.738+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.load manual__2024-09-22T12:55:33.909959+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T12:55:40.848+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='load' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T12:55:33.909959+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T12:55:33.909959+00:00'
+[2024-09-22T12:55:40.850+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:55:40.891+0000] {logging_mixin.py:190} INFO - db ok
+[2024-09-22T12:55:40.892+0000] {logging_mixin.py:190} INFO - {'cust_id': 'AD5e7Ff7dE8aa1a', 'name': 'Ms. Tonya Winters MD', 'sex': 'Female', 'age': 68, 'address': '064 Rubio Viaduct Suite 480', 'phone': '(561)472-2397x499', 'job': 'Radio broadcast assistant'}
+[2024-09-22T12:55:40.893+0000] {logging_mixin.py:190} INFO - {'cust_id': '9bF55aA49cbf68A', 'name': 'Karen Wood PhD', 'sex': 'Female', 'age': 57, 'address': '7429 Kirk Island', 'phone': '(478)991-5733x625', 'job': 'Soil scientist'}
+[2024-09-22T12:55:40.907+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-22T12:55:40.915+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:55:40.916+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=load, run_id=manual__2024-09-22T12:55:33.909959+00:00, execution_date=20240922T125533, start_date=20240922T125540, end_date=20240922T125540
+[2024-09-22T12:55:40.939+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:55:40.966+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T12:55:40.969+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,22 @@
+[2024-09-22T12:55:35.479+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:55:35.503+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.server_api_active manual__2024-09-22T12:55:33.909959+00:00 [queued]>
+[2024-09-22T12:55:35.513+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.server_api_active manual__2024-09-22T12:55:33.909959+00:00 [queued]>
+[2024-09-22T12:55:35.514+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T12:55:35.524+0000] {taskinstance.py:2888} INFO - Executing <Task(HttpSensor): server_api_active> on 2024-09-22 12:55:33.909959+00:00
+[2024-09-22T12:55:35.535+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3051) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:55:35.537+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'server_api_active', 'manual__2024-09-22T12:55:33.909959+00:00', '--job-id', '855', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp07fvx2i2']
+[2024-09-22T12:55:35.540+0000] {standard_task_runner.py:72} INFO - Started process 3052 to run task
+[2024-09-22T12:55:35.541+0000] {standard_task_runner.py:105} INFO - Job 855: Subtask server_api_active
+[2024-09-22T12:55:35.638+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.server_api_active manual__2024-09-22T12:55:33.909959+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T12:55:35.723+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='server_api_active' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T12:55:33.909959+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T12:55:33.909959+00:00'
+[2024-09-22T12:55:35.728+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:55:35.731+0000] {baseoperator.py:405} WARNING - HttpSensor.execute cannot be called outside TaskInstance!
+[2024-09-22T12:55:35.733+0000] {http.py:137} INFO - Poking: generate_data/customers
+[2024-09-22T12:55:35.748+0000] {base.py:84} INFO - Retrieving connection 'http_localhost'
+[2024-09-22T12:55:35.789+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2024-09-22T12:55:35.802+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:55:35.804+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=server_api_active, run_id=manual__2024-09-22T12:55:33.909959+00:00, execution_date=20240922T125533, start_date=20240922T125535, end_date=20240922T125535
+[2024-09-22T12:55:35.850+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:55:35.867+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,20 @@
+[2024-09-22T11:23:36.493+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T11:23:36.547+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.extract_customers_api manual__2024-09-22T11:23:32.458172+00:00 [queued]>
+[2024-09-22T11:23:36.559+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.extract_customers_api manual__2024-09-22T11:23:32.458172+00:00 [queued]>
+[2024-09-22T11:23:36.560+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T11:23:36.587+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): extract_customers_api> on 2024-09-22 11:23:32.458172+00:00
+[2024-09-22T11:23:36.603+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=744) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T11:23:36.606+0000] {standard_task_runner.py:72} INFO - Started process 747 to run task
+[2024-09-22T11:23:36.627+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'extract_customers_api', 'manual__2024-09-22T11:23:32.458172+00:00', '--job-id', '490', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpas_0pz8x']
+[2024-09-22T11:23:36.650+0000] {standard_task_runner.py:105} INFO - Job 490: Subtask extract_customers_api
+[2024-09-22T11:23:36.897+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.extract_customers_api manual__2024-09-22T11:23:32.458172+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T11:23:37.053+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='extract_customers_api' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T11:23:32.458172+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T11:23:32.458172+00:00'
+[2024-09-22T11:23:37.056+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T11:23:37.140+0000] {python.py:240} INFO - Done. Returned value was: [{'cust_id': 'C36c73bcB5Ebd4C', 'name': 'Alejandro Nixon', 'sex': 'Female', 'age': 60, 'address': '1835 Zachary Throughway Suite 878', 'phone': '+1-896-599-4443x35772', 'job': 'Secondary school teacher'}, {'cust_id': '051777B2C3b3Ab1', 'name': 'Dr. Nathaniel Cardenas II', 'sex': 'Female', 'age': 51, 'address': '098 Jo Forks Suite 163', 'phone': '956-379-4698', 'job': 'Theatre stage manager'}, {'cust_id': '5C27F1Dda0EC18A', 'name': 'Yvette Henderson', 'sex': 'Male', 'age': 34, 'address': '9851 Freeman Fields', 'phone': '5324835642', 'job': 'Teacher, adult education'}, {'cust_id': '2e7Ebd5F6C967c4', 'name': 'Cole Norris', 'sex': 'Male', 'age': 45, 'address': '27320 Alyssa Mountains Suite 885', 'phone': '753.458.8464x5339', 'job': 'Production engineer'}, {'cust_id': 'AE31BFCf4ACE5ff', 'name': 'Kendra Hughes', 'sex': 'Male', 'age': 12, 'address': '566 Webb Burgs Suite 151', 'phone': '532-772-0493x705', 'job': 'Tree surgeon'}]
+[2024-09-22T11:23:37.267+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T11:23:37.269+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=extract_customers_api, run_id=manual__2024-09-22T11:23:32.458172+00:00, execution_date=20240922T112332, start_date=20240922T112336, end_date=20240922T112337
+[2024-09-22T11:23:37.341+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T11:23:37.429+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T11:23:37.431+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

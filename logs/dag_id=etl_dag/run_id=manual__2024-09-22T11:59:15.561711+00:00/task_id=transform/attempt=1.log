@@ -1,0 +1,20 @@
+[2024-09-22T11:59:21.049+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T11:59:21.064+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.transform manual__2024-09-22T11:59:15.561711+00:00 [queued]>
+[2024-09-22T11:59:21.070+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.transform manual__2024-09-22T11:59:15.561711+00:00 [queued]>
+[2024-09-22T11:59:21.071+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T11:59:21.081+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2024-09-22 11:59:15.561711+00:00
+[2024-09-22T11:59:21.086+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1684) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T11:59:21.088+0000] {standard_task_runner.py:72} INFO - Started process 1685 to run task
+[2024-09-22T11:59:21.087+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'transform', 'manual__2024-09-22T11:59:15.561711+00:00', '--job-id', '648', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp_rnsh6nk']
+[2024-09-22T11:59:21.091+0000] {standard_task_runner.py:105} INFO - Job 648: Subtask transform
+[2024-09-22T11:59:21.149+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.transform manual__2024-09-22T11:59:15.561711+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T11:59:21.204+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='transform' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T11:59:15.561711+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T11:59:15.561711+00:00'
+[2024-09-22T11:59:21.205+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T11:59:21.208+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-22T11:59:21.217+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T11:59:21.218+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=transform, run_id=manual__2024-09-22T11:59:15.561711+00:00, execution_date=20240922T115915, start_date=20240922T115921, end_date=20240922T115921
+[2024-09-22T11:59:21.233+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T11:59:21.251+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T11:59:21.253+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

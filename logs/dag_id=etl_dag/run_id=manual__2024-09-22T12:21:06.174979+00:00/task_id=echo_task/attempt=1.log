@@ -1,0 +1,24 @@
+[2024-09-22T12:21:13.808+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:21:13.833+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:21:06.174979+00:00 [queued]>
+[2024-09-22T12:21:13.845+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:21:06.174979+00:00 [queued]>
+[2024-09-22T12:21:13.846+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T12:21:13.857+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): echo_task> on 2024-09-22 12:21:06.174979+00:00
+[2024-09-22T12:21:13.863+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2279) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:21:13.865+0000] {standard_task_runner.py:72} INFO - Started process 2280 to run task
+[2024-09-22T12:21:13.866+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'echo_task', 'manual__2024-09-22T12:21:06.174979+00:00', '--job-id', '747', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpdqubqoja']
+[2024-09-22T12:21:13.867+0000] {standard_task_runner.py:105} INFO - Job 747: Subtask echo_task
+[2024-09-22T12:21:13.932+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.echo_task manual__2024-09-22T12:21:06.174979+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T12:21:14.025+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='echo_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T12:21:06.174979+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T12:21:06.174979+00:00'
+[2024-09-22T12:21:14.027+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:21:14.030+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T12:21:14.031+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "echo [{'cust_id': 'E01d14d1fe8BAFB', 'name': 'Carol Yu DDS', 'sex': 'Female', 'age': 59, 'address': '73184 Reid Forges Apt. 124', 'phone': '001-535-370-8460x3583', 'job': 'Podiatrist'}, {'cust_id': '5cD0a784772D9F3', 'name': 'Teresa Russo', 'sex': 'Male', 'age': 65, 'address': '49503 Beasley Brook', 'phone': '947-325-1085x943', 'job': 'Jewellery designer'}, {'cust_id': '9d4d30e8D2bfb5d', 'name': 'Mrs. Lisa Carpenter MD', 'sex': 'Female', 'age': 10, 'address': '32516 Joshua Lane', 'phone': '3625190846', 'job': 'Customer service manager'}, {'cust_id': 'fB7DeC7E69AdEAC', 'name': 'Sabrina Molina DDS', 'sex': 'Female', 'age': 37, 'address': '60466 Rangel Wells Apt. 395', 'phone': '593-279-7631x154', 'job': 'Applications developer'}, {'cust_id': 'aF4BC2f4815d8AD', 'name': 'Mrs. Gwendolyn Moon', 'sex': 'Female', 'age': 63, 'address': '49434 Boyle Burgs Apt. 927', 'phone': '503.937.6130', 'job': 'Social worker'}]"]
+[2024-09-22T12:21:14.037+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T12:21:14.047+0000] {subprocess.py:93} INFO - [{cust_id: E01d14d1fe8BAFB, name: Carol Yu DDS, sex: Female, age: 59, address: 73184 Reid Forges Apt. 124, phone: 001-535-370-8460x3583, job: Podiatrist}, {cust_id: 5cD0a784772D9F3, name: Teresa Russo, sex: Male, age: 65, address: 49503 Beasley Brook, phone: 947-325-1085x943, job: Jewellery designer}, {cust_id: 9d4d30e8D2bfb5d, name: Mrs. Lisa Carpenter MD, sex: Female, age: 10, address: 32516 Joshua Lane, phone: 3625190846, job: Customer service manager}, {cust_id: fB7DeC7E69AdEAC, name: Sabrina Molina DDS, sex: Female, age: 37, address: 60466 Rangel Wells Apt. 395, phone: 593-279-7631x154, job: Applications developer}, {cust_id: aF4BC2f4815d8AD, name: Mrs. Gwendolyn Moon, sex: Female, age: 63, address: 49434 Boyle Burgs Apt. 927, phone: 503.937.6130, job: Social worker}]
+[2024-09-22T12:21:14.049+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T12:21:14.086+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:21:14.087+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=echo_task, run_id=manual__2024-09-22T12:21:06.174979+00:00, execution_date=20240922T122106, start_date=20240922T122113, end_date=20240922T122114
+[2024-09-22T12:21:14.127+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:21:14.154+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T12:21:14.156+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

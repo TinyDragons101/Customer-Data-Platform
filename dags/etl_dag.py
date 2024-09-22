@@ -36,99 +36,91 @@ base_url = 'http://host.docker.internal:8000/'
     description='etl dag to extract-transform-load data'
 )
 def etl_dag():
-    task_is_api_active = HttpSensor(
-        task_id='is_api_active',
-        http_conn_id='http_localhost',
-        endpoint='generate_data/customers'
-    )
-    
     @task()
-    def extract_order_api():
+    def extract_orders_api(ti):
         response = requests.get('http://host.docker.internal:8000/generate_data/orders', timeout=10)
         data = response.json()
-        with open('../data/raw_data/raw_orders.json', 'w') as f:
-            json.dump(data, f)
+        return data
     
     @task()
-    def extract_customers_api():
+    def extract_customers_api(ti):
         response = requests.get('http://host.docker.internal:8000/generate_data/customers', timeout=10)
         data = response.json()
-        with open('../data/raw_data/raw_customers.json', 'w') as f:
-            json.dump(data, f)
+        return data
     
     @task()
-    def extract_products_api():
+    def extract_products_api(ti):
         response = requests.get('http://host.docker.internal:8000/generate_data/products')
         data = response.json()
-        with open('../data/raw_data/raw_products.json', 'w') as f:
-            json.dump(data, f)
+        return data
+    
+    customers_data = extract_customers_api()
+    products_data = extract_products_api()
+    orders_data = extract_orders_api()
     
     @task()
     def transform():
-        with open('../data/raw_data/raw_customers.json') as f:
-            customers_data = json.load(f)
-        with open('../data/raw_data/raw_products.json') as f:
-            products_data = json.load(f)
-        with open('../data/raw_data/raw_orders.json') as f:
-            orders_data = json.load(f)
-        
         # Apply transformation logic
-        transformed_customers_data = customers_data
-        transformed_products_data =  products_data
-        transformed_orders_data = orders_data
-        
-        with open('../data/raw_data/transformed_customers.json', 'w') as f:
-            json.dump(transformed_customers_data, f)
-        with open('../data/raw_data/transformed_products.json', 'w') as f:
-            json.dump(transformed_products_data, f)
-        with open('../data/raw_data/transformed_orders.json', 'w') as f:
-            json.dump(transformed_orders_data, f)
-        
+        pass
+    
     @task()
-    def load():
-        with open('../data/raw_data/transformed_customers.json') as f:
-            customers_data = json.load(f)
-        with open('../data/raw_data/transformed_products.json') as f:
-            products_data = json.load(f)
-        with open('../data/raw_data/transformed_orders.json') as f:
-            orders_data = json.load(f)
+    def load(ti):
+        customers_xcomarg = ti.xcom_pull(key='return_value', task_ids='extract_customers_api')
+        products_xcomarg = ti.xcom_pull(key='return_value', task_ids='extract_products_api')
+        orders_xcomarg = ti.xcom_pull(key='return_value', task_ids='extract_orders_api')
         
+        customers_data = json.loads(r"{}".format(customers_xcomarg.__str__().replace("\'", "\"")))
+        products_data = json.loads(r"{}".format(products_xcomarg.__str__().replace("\'", "\"")))
+        orders_data = json.loads(r"{}".format(orders_xcomarg.__str__().replace("\'", "\"")))
         connection = psycopg2.connect(
             dbname='cdp',
             user='airflow',
             password='airflow',
-            host='localhost'
+            host='host.docker.internal',
+            port=54320
         )
         
+        print("db ok")
+        print(customers_data[1])
+        print(customers_data[2])
         cursor = connection.cursor()
         for customer in customers_data:
             cursor.execute("""
                            INSERT INTO CUSTOMER(cust_id, name, sex, age, address, phone, job)
-                           VALUES(%s, %s, %s, %s ,%s ,%s, %s)""",
-                           (customer['cust_id'], customer['name'], customer['sex'], customer['age'], customer['address'], customer['phone'], customer['job']))
+                           VALUES(%s, %s, %s, %s ,%s ,%s, %s);
+                           INSERT INTO SUM(cust_id, count, sum)
+                           VALUES(%s, 0, 0)""",
+                           (customer['cust_id'], customer['name'], customer['sex'], customer['age'], customer['address'], customer['phone'], customer['job'], customer['cust_id']))
             
         for product in products_data:
             cursor.execute("""
                            INSERT INTO PRODUCT(prod_id, name, price)
-                           VALUE(%s, %s, %s)""",
+                           VALUES(%s, %s, %s)""",
                            (product['prod_id'], product['name'], product['price']))
             
         for order in orders_data:
             cursor.execute("""
                            INSERT INTO ORDERS(ord_id, cust_id, prod_id, count)
-                           VALUES(%s, %s, %s)""",
-                           (order['ord_id'], order['cust_id'], order['prod_id'], order['count']))
+                           VALUES(%s, %s, %s, %s);
+                           
+                           UPDATE SUM s
+                           SET count = count + %s,
+                           sum = sum + %s * p.price
+                           FROM PRODUCT p
+                           WHERE p.prod_id = %s
+                           AND s.cust_id = %s""",
+                           (order['ord_id'], order['cust_id'], order['prod_id'], order['count'], order['count'], order['count'], order['prod_id'], order['cust_id']))
             
         connection.commit()
         cursor.close()
         connection.close()
-        
+    
     bash_echo = BashOperator(
         task_id='echo_task',
-        bash_command='echo created table successfully'
+        bash_command='echo Successfully'
     )
     
-    extract_customers_api() >> extract_products_api() >> extract_order_api() >> transform() >> load() >> bash_echo
+    [customers_data, products_data] >> orders_data >> transform() >> load() >> bash_echo
 
 etl_dag()
     

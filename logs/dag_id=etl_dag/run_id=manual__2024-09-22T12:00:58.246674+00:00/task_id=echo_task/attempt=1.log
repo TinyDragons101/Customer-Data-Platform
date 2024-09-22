@@ -1,0 +1,24 @@
+[2024-09-22T12:01:03.772+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:01:03.785+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:00:58.246674+00:00 [queued]>
+[2024-09-22T12:01:03.791+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:00:58.246674+00:00 [queued]>
+[2024-09-22T12:01:03.791+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T12:01:03.800+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): echo_task> on 2024-09-22 12:00:58.246674+00:00
+[2024-09-22T12:01:03.804+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1733) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:01:03.805+0000] {standard_task_runner.py:72} INFO - Started process 1734 to run task
+[2024-09-22T12:01:03.805+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'echo_task', 'manual__2024-09-22T12:00:58.246674+00:00', '--job-id', '657', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpscogr67y']
+[2024-09-22T12:01:03.806+0000] {standard_task_runner.py:105} INFO - Job 657: Subtask echo_task
+[2024-09-22T12:01:03.842+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.echo_task manual__2024-09-22T12:00:58.246674+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T12:01:03.943+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='echo_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T12:00:58.246674+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T12:00:58.246674+00:00'
+[2024-09-22T12:01:03.945+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:01:03.947+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T12:01:03.948+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "echo [{'cust_id': 'EA9d3cb36AcbCDA', 'name': 'Miss Penny Mcknight DDS', 'sex': 'Male', 'age': 26, 'address': '3186 Holden Village', 'phone': '793-642-6286x014', 'job': 'Engineer, building services'}, {'cust_id': '845D7cC8289da63', 'name': 'Shane Melton', 'sex': 'Male', 'age': 34, 'address': '61875 Bryant Lodge Suite 539', 'phone': '219-986-3040x677', 'job': 'Control and instrumentation engineer'}, {'cust_id': '2eDecb0Ed1fDFd1', 'name': 'Dr. Alan Fritz', 'sex': 'Male', 'age': 24, 'address': '762 Dunn Ramp', 'phone': '+1-596-952-0203x2052', 'job': 'Chartered accountant'}, {'cust_id': '0fc2629B2AA3E44', 'name': 'Abigail Johnston PhD', 'sex': 'Male', 'age': 69, 'address': '087 Cassie Ridge', 'phone': '965.951.1314x164', 'job': 'Therapist, drama'}, {'cust_id': 'A805CfDD9dd1957', 'name': 'Jose Fitzgerald', 'sex': 'Female', 'age': 36, 'address': '802 Michael Locks Apt. 483', 'phone': '718-629-6990x8184', 'job': 'Psychotherapist, dance movement'}]"]
+[2024-09-22T12:01:03.954+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T12:01:03.957+0000] {subprocess.py:93} INFO - [{cust_id: EA9d3cb36AcbCDA, name: Miss Penny Mcknight DDS, sex: Male, age: 26, address: 3186 Holden Village, phone: 793-642-6286x014, job: Engineer, building services}, {cust_id: 845D7cC8289da63, name: Shane Melton, sex: Male, age: 34, address: 61875 Bryant Lodge Suite 539, phone: 219-986-3040x677, job: Control and instrumentation engineer}, {cust_id: 2eDecb0Ed1fDFd1, name: Dr. Alan Fritz, sex: Male, age: 24, address: 762 Dunn Ramp, phone: +1-596-952-0203x2052, job: Chartered accountant}, {cust_id: 0fc2629B2AA3E44, name: Abigail Johnston PhD, sex: Male, age: 69, address: 087 Cassie Ridge, phone: 965.951.1314x164, job: Therapist, drama}, {cust_id: A805CfDD9dd1957, name: Jose Fitzgerald, sex: Female, age: 36, address: 802 Michael Locks Apt. 483, phone: 718-629-6990x8184, job: Psychotherapist, dance movement}]
+[2024-09-22T12:01:03.958+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T12:01:03.979+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:01:03.980+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=echo_task, run_id=manual__2024-09-22T12:00:58.246674+00:00, execution_date=20240922T120058, start_date=20240922T120103, end_date=20240922T120103
+[2024-09-22T12:01:04.027+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:01:04.046+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T12:01:04.048+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

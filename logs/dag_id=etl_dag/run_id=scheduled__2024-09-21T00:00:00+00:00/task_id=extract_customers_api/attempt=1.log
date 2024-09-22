@@ -143,3 +143,23 @@ requests.exceptions.InvalidSchema: No connection adapters were found for 'localh
 [2024-09-22T02:52:18.875+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
 [2024-09-22T02:52:19.004+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
 [2024-09-22T02:52:19.008+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-09-22T12:16:52.191+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:16:52.227+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.extract_customers_api scheduled__2024-09-21T00:00:00+00:00 [queued]>
+[2024-09-22T12:16:52.249+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.extract_customers_api scheduled__2024-09-21T00:00:00+00:00 [queued]>
+[2024-09-22T12:16:52.252+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T12:16:52.268+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): extract_customers_api> on 2024-09-21 00:00:00+00:00
+[2024-09-22T12:16:52.275+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2104) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:16:52.280+0000] {standard_task_runner.py:72} INFO - Started process 2109 to run task
+[2024-09-22T12:16:52.280+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'extract_customers_api', 'scheduled__2024-09-21T00:00:00+00:00', '--job-id', '710', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp0b8aht0t']
+[2024-09-22T12:16:52.283+0000] {standard_task_runner.py:105} INFO - Job 710: Subtask extract_customers_api
+[2024-09-22T12:16:52.385+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.extract_customers_api scheduled__2024-09-21T00:00:00+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T12:16:52.539+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='extract_customers_api' AIRFLOW_CTX_EXECUTION_DATE='2024-09-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-21T00:00:00+00:00'
+[2024-09-22T12:16:52.542+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:16:52.583+0000] {python.py:240} INFO - Done. Returned value was: [{'cust_id': 'ACb3fCb5FBefcBA', 'name': 'Chelsea Moses MD', 'sex': 'Male', 'age': 43, 'address': '9830 Mayo Throughway Apt. 150', 'phone': '523.299.2967x1946', 'job': 'Designer, graphic'}, {'cust_id': '0EaBD7bB2AdfFd8', 'name': 'Mrs. Yvonne Forbes', 'sex': 'Female', 'age': 12, 'address': '023 Katrina Oval Suite 121', 'phone': '(598)830-7742x408', 'job': 'Producer, television/film/video'}, {'cust_id': '5E6B53d0BcfD23C', 'name': 'Dr. Diane Ho PhD', 'sex': 'Female', 'age': 14, 'address': '0996 Bruce Harbors', 'phone': '9845067413', 'job': 'Armed forces operational officer'}, {'cust_id': 'eB9e9C5323C242c', 'name': 'Crystal Guzman', 'sex': 'Female', 'age': 25, 'address': '68568 Moore Drive', 'phone': '204.955.1536', 'job': 'Buyer, retail'}, {'cust_id': '2E88A28bEdcC2bb', 'name': 'Terri Ayers DDS', 'sex': 'Female', 'age': 29, 'address': '33757 Orr Streets Apt. 446', 'phone': '001-343-640-0508x99536', 'job': 'Pharmacologist'}]
+[2024-09-22T12:16:52.639+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:16:52.641+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=extract_customers_api, run_id=scheduled__2024-09-21T00:00:00+00:00, execution_date=20240921T000000, start_date=20240922T121652, end_date=20240922T121652
+[2024-09-22T12:16:52.673+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:16:52.833+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T12:16:52.843+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

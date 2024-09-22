@@ -42,6 +42,6 @@ ORDERS_SCHEMA = [{
     "name": "prod_id",
     "type": "id"
 }, {
-    "name": "quantity",
-    "type": "quantity"
+    "name": "count",
+    "type": "count"
 }]

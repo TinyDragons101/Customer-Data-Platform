@@ -3,7 +3,7 @@ drop table if exists PRODUCT;
 create table PRODUCT (
     prod_id varchar PRIMARY KEY,
     name varchar,
-    price numeric(2)
+    price real
 );
 
 -- insert into PRODUCT(prod_id, name, size, price) values('94E559c49d887e6','Pizza Napoletana',5.5);

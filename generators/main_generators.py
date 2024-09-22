@@ -144,7 +144,7 @@ def generate_more_customers():
     filepath = Path(__file__).parent / "../data/data/customer.csv"
     schema_dict = CUSTOMERS_SCHEMA
     data_list = []
-    for i in range(5):
+    for i in range(7):
         data_object = {
             elem['name']: TYPES_TO_GENERATORS[elem['type']]() for elem in schema_dict
         }
@@ -181,9 +181,9 @@ def generate_more_orders():
     data_list = []
     customers_id = pandas.read_csv(Path(__file__).parent / "../data/data/customer.csv")['cust_id'].to_list()
     products_id = pandas.read_csv(Path(__file__).parent / "../data/data/product.csv")['prod_id'].to_list()
-    for i in range(5):
+    for i in range(10):
         data_object = {
-            'order_id': random_string(),
+            'ord_id': random_string(),
             'cust_id': random.choice(customers_id),
             'prod_id': random.choice(products_id),
             'count': random.randint(1, 3)
@@ -202,9 +202,9 @@ def hello():
     return "hello"
             
    
-if __name__ == '__main__':
-    # generate_file('customers', 'customers-50', 50)
-    # generate_product()
-    print(generate_more_orders())
-    # generate_more_products()
-    # generate_more_orders()
+# if __name__ == '__main__':
+#     # generate_file('customers', 'customers-50', 50)
+#     # generate_product()
+#     # print(generate_more_orders())
+#     # generate_more_products()
+#     # generate_more_orders()

@@ -1,0 +1,24 @@
+[2024-09-22T12:33:46.681+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:33:46.718+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:33:39.942928+00:00 [queued]>
+[2024-09-22T12:33:46.730+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:33:39.942928+00:00 [queued]>
+[2024-09-22T12:33:46.731+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T12:33:46.748+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): echo_task> on 2024-09-22 12:33:39.942928+00:00
+[2024-09-22T12:33:46.760+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2568) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:33:46.764+0000] {standard_task_runner.py:72} INFO - Started process 2569 to run task
+[2024-09-22T12:33:46.765+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'echo_task', 'manual__2024-09-22T12:33:39.942928+00:00', '--job-id', '787', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpmfy97_hy']
+[2024-09-22T12:33:46.769+0000] {standard_task_runner.py:105} INFO - Job 787: Subtask echo_task
+[2024-09-22T12:33:46.927+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.echo_task manual__2024-09-22T12:33:39.942928+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T12:33:47.015+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='echo_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T12:33:39.942928+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T12:33:39.942928+00:00'
+[2024-09-22T12:33:47.016+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:33:47.020+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T12:33:47.021+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "echo [{'cust_id': '4BC3dfe2516CCbe', 'name': 'Jeff Aguirre', 'sex': 'Male', 'age': 60, 'address': '591 Hurley Cape', 'phone': '(745)685-7736', 'job': 'Hydrogeologist'}, {'cust_id': 'EfaAAFDdc8b4BA6', 'name': 'Marcus Fox II', 'sex': 'Male', 'age': 58, 'address': '767 Foster Turnpike', 'phone': '(767)245-0873x5649', 'job': 'Conservation officer, nature'}, {'cust_id': 'fccDB3a302ACc6E', 'name': 'Miguel Ryan', 'sex': 'Female', 'age': 18, 'address': '9503 Levine Courts Suite 370', 'phone': '798.324.9253', 'job': 'Development worker, community'}, {'cust_id': 'cc24FaBCeaf5286', 'name': 'Kristen Beltran', 'sex': 'Male', 'age': 66, 'address': '4607 Emma Shores Suite 811', 'phone': '813-270-0784x28074', 'job': 'Adult nurse'}, {'cust_id': 'EB28aE89FeA47A5', 'name': 'Molly Horn PhD', 'sex': 'Female', 'age': 46, 'address': '6181 Vaughn Crossroad', 'phone': '001-372-807-4591x74016', 'job': 'Clinical molecular geneticist'}]"]
+[2024-09-22T12:33:47.026+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T12:33:47.031+0000] {subprocess.py:93} INFO - [{cust_id: 4BC3dfe2516CCbe, name: Jeff Aguirre, sex: Male, age: 60, address: 591 Hurley Cape, phone: (745)685-7736, job: Hydrogeologist}, {cust_id: EfaAAFDdc8b4BA6, name: Marcus Fox II, sex: Male, age: 58, address: 767 Foster Turnpike, phone: (767)245-0873x5649, job: Conservation officer, nature}, {cust_id: fccDB3a302ACc6E, name: Miguel Ryan, sex: Female, age: 18, address: 9503 Levine Courts Suite 370, phone: 798.324.9253, job: Development worker, community}, {cust_id: cc24FaBCeaf5286, name: Kristen Beltran, sex: Male, age: 66, address: 4607 Emma Shores Suite 811, phone: 813-270-0784x28074, job: Adult nurse}, {cust_id: EB28aE89FeA47A5, name: Molly Horn PhD, sex: Female, age: 46, address: 6181 Vaughn Crossroad, phone: 001-372-807-4591x74016, job: Clinical molecular geneticist}]
+[2024-09-22T12:33:47.031+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T12:33:47.052+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:33:47.052+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=echo_task, run_id=manual__2024-09-22T12:33:39.942928+00:00, execution_date=20240922T123339, start_date=20240922T123346, end_date=20240922T123347
+[2024-09-22T12:33:47.079+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:33:47.108+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T12:33:47.112+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,20 @@
+[2024-09-22T13:03:35.780+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T13:03:35.807+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.extract_products_api manual__2024-09-22T13:02:32.966636+00:00 [queued]>
+[2024-09-22T13:03:35.815+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.extract_products_api manual__2024-09-22T13:02:32.966636+00:00 [queued]>
+[2024-09-22T13:03:35.816+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2024-09-22T13:03:35.828+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): extract_products_api> on 2024-09-22 13:02:32.966636+00:00
+[2024-09-22T13:03:35.835+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3252) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T13:03:35.837+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'extract_products_api', 'manual__2024-09-22T13:02:32.966636+00:00', '--job-id', '886', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpnyfwdyv1']
+[2024-09-22T13:03:35.838+0000] {standard_task_runner.py:72} INFO - Started process 3253 to run task
+[2024-09-22T13:03:35.839+0000] {standard_task_runner.py:105} INFO - Job 886: Subtask extract_products_api
+[2024-09-22T13:03:35.899+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.extract_products_api manual__2024-09-22T13:02:32.966636+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T13:03:35.969+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='extract_products_api' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T13:02:32.966636+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T13:02:32.966636+00:00'
+[2024-09-22T13:03:35.971+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T13:03:35.986+0000] {python.py:240} INFO - Done. Returned value was: [{'prod_id': '2967E73D2A287d9', 'name': 'Pinsa romana - fish', 'price': 5.75}, {'prod_id': 'd75dc7fAB9fE6c7', 'name': 'Pizza al taglio - nuts', 'price': 5.5}, {'prod_id': 'E7Da1Ad2739C5Ed', 'name': 'Pizza ai funghi - banana', 'price': 7.5}]
+[2024-09-22T13:03:36.016+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T13:03:36.017+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=extract_products_api, run_id=manual__2024-09-22T13:02:32.966636+00:00, execution_date=20240922T130232, start_date=20240922T130335, end_date=20240922T130336
+[2024-09-22T13:03:36.064+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T13:03:36.094+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T13:03:36.095+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,24 @@
+[2024-09-22T12:18:46.067+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:18:46.083+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:18:38.009957+00:00 [queued]>
+[2024-09-22T12:18:46.094+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.echo_task manual__2024-09-22T12:18:38.009957+00:00 [queued]>
+[2024-09-22T12:18:46.095+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T12:18:46.120+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): echo_task> on 2024-09-22 12:18:38.009957+00:00
+[2024-09-22T12:18:46.139+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2185) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:18:46.141+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'echo_task', 'manual__2024-09-22T12:18:38.009957+00:00', '--job-id', '726', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmprsauf7op']
+[2024-09-22T12:18:46.142+0000] {standard_task_runner.py:72} INFO - Started process 2186 to run task
+[2024-09-22T12:18:46.143+0000] {standard_task_runner.py:105} INFO - Job 726: Subtask echo_task
+[2024-09-22T12:18:46.240+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.echo_task manual__2024-09-22T12:18:38.009957+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T12:18:46.316+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='echo_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T12:18:38.009957+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T12:18:38.009957+00:00'
+[2024-09-22T12:18:46.318+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:18:46.322+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T12:18:46.324+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo [{\'cust_id\': \'ffCe51B16eaab0e\', \'name\': \'Ethan Coffey Jr.\', \'sex\': \'Male\', \'age\': 56, \'address\': \'121 Ebony Glens\', \'phone\': \'(473)201-3061\', \'job\': \'Animator\'}, {\'cust_id\': \'4AdBcfB5737Bb22\', \'name\': \'Ms. Michelle Doyle MD\', \'sex\': \'Male\', \'age\': 46, \'address\': \'54671 Casey Light\', \'phone\': \'001-865-679-9400\', \'job\': \'Technical brewer\'}, {\'cust_id\': \'C6AA4d1E7acBc83\', \'name\': \'Riley Lowery\', \'sex\': \'Male\', \'age\': 19, \'address\': \'1344 Garrison Field Apt. 534\', \'phone\': \'222-340-8553x4684\', \'job\': \'Forensic psychologist\'}, {\'cust_id\': \'7B03cc887bceD23\', \'name\': \'Mrs. Brenda Dunn DDS\', \'sex\': \'Female\', \'age\': 25, \'address\': \'432 Tim Trail Apt. 378\', \'phone\': \'239.753.8299\', \'job\': \'Magazine features editor\'}, {\'cust_id\': \'6bbb600F8e587Ea\', \'name\': \'Courtney Fernandez\', \'sex\': \'Male\', \'age\': 67, \'address\': \'1149 Mcclure Terrace Suite 015\', \'phone\': \'001-959-864-0009\', \'job\': "Politician\'s assistant"}]']
+[2024-09-22T12:18:46.332+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T12:18:46.336+0000] {subprocess.py:93} INFO - [{cust_id: ffCe51B16eaab0e, name: Ethan Coffey Jr., sex: Male, age: 56, address: 121 Ebony Glens, phone: (473)201-3061, job: Animator}, {cust_id: 4AdBcfB5737Bb22, name: Ms. Michelle Doyle MD, sex: Male, age: 46, address: 54671 Casey Light, phone: 001-865-679-9400, job: Technical brewer}, {cust_id: C6AA4d1E7acBc83, name: Riley Lowery, sex: Male, age: 19, address: 1344 Garrison Field Apt. 534, phone: 222-340-8553x4684, job: Forensic psychologist}, {cust_id: 7B03cc887bceD23, name: Mrs. Brenda Dunn DDS, sex: Female, age: 25, address: 432 Tim Trail Apt. 378, phone: 239.753.8299, job: Magazine features editor}, {cust_id: 6bbb600F8e587Ea, name: Courtney Fernandez, sex: Male, age: 67, address: 1149 Mcclure Terrace Suite 015, phone: 001-959-864-0009, job: Politician's assistant}]
+[2024-09-22T12:18:46.339+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T12:18:46.411+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:18:46.413+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=echo_task, run_id=manual__2024-09-22T12:18:38.009957+00:00, execution_date=20240922T121838, start_date=20240922T121846, end_date=20240922T121846
+[2024-09-22T12:18:46.497+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:18:46.537+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T12:18:46.540+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

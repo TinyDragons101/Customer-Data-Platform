@@ -1,0 +1,20 @@
+[2024-09-22T11:29:27.501+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T11:29:27.533+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.extract_orders_api manual__2024-09-22T11:29:24.574969+00:00 [queued]>
+[2024-09-22T11:29:27.545+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.extract_orders_api manual__2024-09-22T11:29:24.574969+00:00 [queued]>
+[2024-09-22T11:29:27.547+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-22T11:29:27.563+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): extract_orders_api> on 2024-09-22 11:29:24.574969+00:00
+[2024-09-22T11:29:27.616+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=865) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T11:29:27.627+0000] {standard_task_runner.py:72} INFO - Started process 870 to run task
+[2024-09-22T11:29:27.631+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'extract_orders_api', 'manual__2024-09-22T11:29:24.574969+00:00', '--job-id', '506', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpqrzkqc39']
+[2024-09-22T11:29:27.634+0000] {standard_task_runner.py:105} INFO - Job 506: Subtask extract_orders_api
+[2024-09-22T11:29:27.714+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.extract_orders_api manual__2024-09-22T11:29:24.574969+00:00 [running]> on host 6e2558f7c62d
+[2024-09-22T11:29:27.847+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='extract_orders_api' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T11:29:24.574969+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T11:29:24.574969+00:00'
+[2024-09-22T11:29:27.852+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T11:29:27.900+0000] {python.py:240} INFO - Done. Returned value was: [{'order_id': 'cfE2e4B2cd31fCd', 'cust_id': 'C4ABDc59c5B1acc', 'prod_id': 'DAc5bC46877682c', 'count': 1}, {'order_id': '2B4FD610a90BAeC', 'cust_id': 'cFFADA0c1adAf3d', 'prod_id': 'A20b42FD231B94B', 'count': 1}, {'order_id': 'Dc6faf708f21378', 'cust_id': 'C8778bdA76cBf47', 'prod_id': '5c94857FD6618dE', 'count': 3}, {'order_id': 'b16b73B592fE511', 'cust_id': '2AbdACdAc2EcAb0', 'prod_id': 'eFc23D114f9Efb3', 'count': 2}, {'order_id': 'c176aaB9C4Fad7d', 'cust_id': 'AC95aDF06f9a99C', 'prod_id': '94b3EF95a337EFB', 'count': 2}]
+[2024-09-22T11:29:27.941+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T11:29:27.945+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=extract_orders_api, run_id=manual__2024-09-22T11:29:24.574969+00:00, execution_date=20240922T112924, start_date=20240922T112927, end_date=20240922T112927
+[2024-09-22T11:29:27.975+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T11:29:28.003+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T11:29:28.007+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -4,7 +4,7 @@ create table CUSTOMER (
     cust_id varchar PRIMARY KEY,
     name varchar,
     sex varchar,
-    age decimal,
+    age smallint,
     address varchar,
     phone varchar,
     job varchar
