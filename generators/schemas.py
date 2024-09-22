@@ -28,9 +28,6 @@ PRODUCTS_SCHEMA = [{
     "name": "name",
     "type": "prod_name"
 }, {
-    "name": "size",
-    "type": "size"
-}, {
     "name": "price",
     "type": "price"
 }]

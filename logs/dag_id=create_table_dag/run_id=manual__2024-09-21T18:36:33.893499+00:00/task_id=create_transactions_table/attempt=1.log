@@ -1,0 +1,37 @@
+[2024-09-21T18:36:35.969+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-21T18:36:36.035+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_table_dag.create_transactions_table manual__2024-09-21T18:36:33.893499+00:00 [queued]>
+[2024-09-21T18:36:36.058+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_table_dag.create_transactions_table manual__2024-09-21T18:36:33.893499+00:00 [queued]>
+[2024-09-21T18:36:36.059+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-21T18:36:36.115+0000] {taskinstance.py:2888} INFO - Executing <Task(SQLExecuteQueryOperator): create_transactions_table> on 2024-09-21 18:36:33.893499+00:00
+[2024-09-21T18:36:36.148+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=588) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-21T18:36:36.155+0000] {standard_task_runner.py:72} INFO - Started process 593 to run task
+[2024-09-21T18:36:36.191+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'create_table_dag', 'create_transactions_table', 'manual__2024-09-21T18:36:33.893499+00:00', '--job-id', '252', '--raw', '--subdir', 'DAGS_FOLDER/create_table_dag.py', '--cfg-path', '/tmp/tmpi7hc0t84']
+[2024-09-21T18:36:36.199+0000] {standard_task_runner.py:105} INFO - Job 252: Subtask create_transactions_table
+[2024-09-21T18:36:36.444+0000] {task_command.py:467} INFO - Running <TaskInstance: create_table_dag.create_transactions_table manual__2024-09-21T18:36:33.893499+00:00 [running]> on host 6e2558f7c62d
+[2024-09-21T18:36:36.713+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_table_dag' AIRFLOW_CTX_TASK_ID='create_transactions_table' AIRFLOW_CTX_EXECUTION_DATE='2024-09-21T18:36:33.893499+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-21T18:36:33.893499+00:00'
+[2024-09-21T18:36:36.717+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-21T18:36:36.735+0000] {sql.py:266} INFO - Executing: drop table if exists TRANSACTIONS;
+
+create table TRANSACTIONS (
+    ord_id varchar PRIMARY KEY,
+    cust_id varchar,
+    prod_id varchar,
+    count numeric
+);
+[2024-09-21T18:36:36.767+0000] {base.py:84} INFO - Retrieving connection 'postgres_localhost'
+[2024-09-21T18:36:36.838+0000] {base.py:84} INFO - Retrieving connection 'postgres_localhost'
+[2024-09-21T18:36:36.879+0000] {sql.py:509} INFO - Running statement: drop table if exists TRANSACTIONS;
+
+create table TRANSACTIONS (
+    ord_id varchar PRIMARY KEY,
+    cust_id varchar,
+    prod_id varchar,
+    count numeric
+);, parameters: None
+[2024-09-21T18:36:36.978+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-21T18:36:36.982+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=create_table_dag, task_id=create_transactions_table, run_id=manual__2024-09-21T18:36:33.893499+00:00, execution_date=20240921T183633, start_date=20240921T183636, end_date=20240921T183636
+[2024-09-21T18:36:37.077+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-21T18:36:37.127+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-21T18:36:37.131+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
